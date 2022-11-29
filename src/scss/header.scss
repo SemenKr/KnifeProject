@@ -36,20 +36,11 @@
   }
 }
 .menu {
-  &__icon {
-  }
-
-  &__body {
-  }
-
   &__list {
     display: flex;
     flex-wrap: wrap;
     gap: rem(60);
     @include adaptiveValue("gap", 60, 20);
-  }
-
-  &__item {
   }
 
   &__link {
@@ -149,9 +140,6 @@
       font-size: rem(24);
       margin: 0px em(10, 24) 0px 0px;
     }
-  }
-
-  &__phone {
   }
 
   &__favorite {
@@ -279,20 +267,12 @@
   background-color: $mainDarkColor;
   color: $mainTextColorLight;
   position: relative;
-  &__container {
-  }
-
-  &__menu {
-  }
 }
 .menu-catalog {
   &__list {
     display: flex;
     gap: rem(10);
     justify-content: space-between;
-  }
-
-  &__item {
   }
 
   &__link {
@@ -327,12 +307,19 @@
         }
       }
     }
+
+    &._sub-menu-active {
+      color: $accentColor;
+      transition: all 0.3s ease 0s;
+
+      &::after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
   }
 
   &__sub-menu {
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
     width: 100%;
     left: 0;
     top: 100%;
@@ -340,12 +327,15 @@
   }
 }
 .sub-menu-catalog {
-  padding-bottom: rem(30);
-
   &__block {
+    padding-bottom: rem(30);
     padding: 0 rem(10);
-    display: flex;
+    display: none;
     justify-content: space-between;
+
+    &._sub-menu-open {
+      display: flex;
+    }
   }
 
   &__column {
@@ -403,8 +393,6 @@
     }
   }
 }
-.sub-menu-catalog--item {
-}
 
 // Burger
 
@@ -441,9 +429,6 @@
     .menu-open & {
       span {
         width: 0;
-      }
-      &::before,
-      &::after {
       }
       &::before {
         top: calc(50% - rem(1));
