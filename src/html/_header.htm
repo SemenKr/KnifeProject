@@ -1,8 +1,7 @@
 <header class="header">
 	<div class="header__top top-header">
 		<div class="top-header__container">
-			<div class="header__menu menu">
-				<button type="button" class="menu__icon icon-menu"><span></span></button>
+			<div class="top-header__menu menu">
 				<nav class="menu__body">
 					<ul class="menu__list">
 						<li class="menu__item"><a href="" class="menu__link">О нас</a></li>
@@ -13,9 +12,94 @@
 				</nav>
 			</div>
 			<a href="" class="top-header__user _icon-user">Личный кабинет</a>
-			<button type="button" class="icon-menu"></button>
+			<button type="button" class="icon-menu"><span></span></button>
 		</div>
 	</div>
-	<div class="header__body body-header"><span></span></div>
-	<div class="header__catalog catalog header"></div>
+	<div class="header__body body-header">
+		<div class="body-header__container">
+			<a href="" class="body-header__logo"></a>
+			<div class="body-header__search">
+				<form action="#" class="search-header">
+					<button type="submit" class="search-header__button _icon-search"></button>
+					<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Поиск"
+						class="search-header__input">
+				</form>
+			</div>
+			<div class="body-header__actions actions-header">
+				<a href="#" class="actions-header__location _icon-location">Москва</a>
+				<div class="actions-header__phone phones-header">
+					<div class="phone-header__items">
+						<div data-spollers class="phone-header">
+							<div class="phone-header__item">
+								<a href="tel:88007774967" class="phone-header__phone">8-800-777-49-67</a>
+								<button type="button" data-spoller class="phone-header__arrow _icon-arrow-bottom"></button>
+								<ul class=" phone-header__list">
+									<li><a href="tel:88007774963" class="phone-header__phone">8-800-777-49-63</a></li>
+									<li><a href="tel:88007774962" class="phone-header__phone">8-800-777-49-62</a></li>
+									<li><a href="tel:88007774961" class="phone-header__phone">8-800-777-49-61</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<button type="button" data-popup="#callback" class="phone-header__callback">Заказать звонок</button>
+				</div>
+				<a href="" class="actions-header__favorite _icon-favorit"></a>
+				<div class="actions-header__card card-header">
+					<div class="card-header__icon _icon-basket"><span>0</span></div>
+					<div class="card-header__body">
+						<div class="card-header__sum">0 р.</div>
+						<a href="#" class="card-header__link">Оформить заказ</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header__catalog catalog-header">
+		<div class="catalog-header__container">
+			<nav class="catalog-header__menu menu-catalog">
+				<ul class="menu-catalog__list">
+					<li class="menu-catalog__item"><a href="" class="menu-catalog__link">Каталог ножей</a></li>
+					<li class="menu-catalog__item"><a href="" class="menu-catalog__link">Клинковое оружие</a></li>
+					<li class="menu-catalog__item"><a href="" class="menu-catalog__link">Сувенирные изделия</a></li>
+					<li class="menu-catalog__item"><a href="" class="menu-catalog__link">Фонари ARMYTEK</a></li>
+					<li class="menu-catalog__item"><a href="" class="menu-catalog__link">Сопутствующие товары</a></li>
+				</ul>
+				<div class="menu-catalog__sub-menu sub-menu-catalog">
+					<div class="sub-menu-catalog__container">
+						<div class="sub-menu-catalog__block">
+							<div class="sub-menu-catalog__column">
+								<a href="" class="sub-menu-catalog__category">Категория ножей</a>
+								<ul class="sub-menu-catalog__list">
+									<li class="sub-menu-catalog--item"><a href="" class="sub-menu-catalog__link">Разделочные
+											ножи</a></li>
+									<li class="sub-menu-catalog--item"><a href="" class="sub-menu-catalog__link">Туристические
+											ножи</a></li>
+									<li class="sub-menu-catalog--item"><a href="" class="sub-menu-catalog__link">Ножи
+											охотничьи</a>
+									</li>
+									<li class="sub-menu-catalog--item"><a href="" class="sub-menu-catalog__link">Булатные
+											ножи</a>
+									</li>
+									<li class="sub-menu-catalog--item"><a href="" class="sub-menu-catalog__link">Ножи из
+											дамаска</a>
+									</li>
+									<li class="sub-menu-catalog--item"><a href="" class="sub-menu-catalog__link">Тактического
+											назначения</a></li>
+									<li class="sub-menu-catalog--item"><a href="" class="sub-menu-catalog__link">Метательные
+											ножи</a></li>
+									<li class="sub-menu-catalog--item"><a href="" class="sub-menu-catalog__link">Мачете и
+											кукри</a>
+									</li>
+									<li class="sub-menu-catalog--item"><a href="" class="sub-menu-catalog__link">Ножи
+											кухонные</a>
+									</li>
+								</ul>
+								<a href="#" class="sub-menu-catalog__all">Смотреть все</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</div>
 </header>
