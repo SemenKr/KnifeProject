@@ -55,6 +55,12 @@
   &__link {
     font-size: rem(16);
     line-height: math.div(20, 16);
+    //hhv snippet
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
 
@@ -131,6 +137,14 @@
     font-weight: 600;
     margin: 0px rem(25) 0px 0px;
 
+    @media (any-hover: hover) {
+      &:hover {
+        span {
+          text-decoration: underline;
+        }
+      }
+    }
+
     &::before {
       font-size: rem(24);
       margin: 0px em(10, 24) 0px 0px;
@@ -160,6 +174,11 @@
     font-weight: $fw-m;
     line-height: math.div(22, 18);
     white-space: nowrap;
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   &__arrow {
@@ -196,6 +215,11 @@
     font-weight: $fw-l;
     line-height: math.div(22, 18);
     color: $accentColor;
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
 
@@ -240,6 +264,11 @@
 
   &__link {
     color: $accentColor;
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
 
@@ -285,6 +314,18 @@
       width: calc(100% - rem(20));
       height: rem(1);
       background-color: $accentColor;
+      transition: color 0.3s ease 0s;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $accentColor;
+
+        &::after {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
     }
   }
 
@@ -307,7 +348,8 @@
 
   &__column {
     flex: 1 1 auto;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: rem(30);
   }
 
@@ -315,21 +357,48 @@
     font-size: rem(16);
     line-height: math.div(20, 16);
     font-weight: $fw-l;
-    padding: rem(30) 0;
+    padding: rem(30) rem(10);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   &__list {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: rem(30);
+    padding-left: rem(10);
+    padding-right: rem(10);
   }
 
   &__link {
+    font-size: rem(16);
+    line-height: math.div(20, 16);
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   &__all {
     font-size: rem(16);
     padding: rem(30) 0;
     color: $accentColor;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-left: rem(10);
+    padding-right: rem(10);
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
 .sub-menu-catalog--item {
