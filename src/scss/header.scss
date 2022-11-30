@@ -10,434 +10,434 @@
 //========================================================================================================================================================
 
 .top-header {
-  padding: rem(10) 0;
-  background-color: $mainDarkColor;
-  color: $mainTextColorLight;
-  &__container {
-    display: flex;
-    align-items: center;
-    gap: rem(20);
-    min-height: rem(50);
-  }
+   padding: rem(10) 0;
+   background-color: $mainDarkColor;
+   color: $mainTextColorLight;
+   &__container {
+      display: flex;
+      align-items: center;
+      gap: rem(20);
+      min-height: rem(50);
+   }
 
-  &__menu {
-    flex: 1 1 auto;
-  }
+   &__menu {
+      flex: 1 1 auto;
+   }
 
-  &__user {
-    display: inline-flex;
-    align-items: center;
-    font-weight: 600;
-    line-height: math.div(22, 18);
-    &::before {
-      font-size: rem(28);
-      margin-right: em(15, 28);
-    }
-  }
+   &__user {
+      display: inline-flex;
+      align-items: center;
+      font-weight: 600;
+      line-height: math.div(22, 18);
+      &::before {
+         font-size: rem(28);
+         margin-right: em(15, 28);
+      }
+   }
 }
 .menu {
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: rem(60);
-    @include adaptiveValue("gap", 60, 20);
-  }
+   &__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: rem(60);
+      @include adaptiveValue("gap", 60, 20);
+   }
 
-  &__link {
-    font-size: rem(16);
-    line-height: math.div(20, 16);
-    //hhv snippet
-    @media (any-hover: hover) {
-      &:hover {
-        text-decoration: underline;
+   &__link {
+      font-size: rem(16);
+      line-height: math.div(20, 16);
+      //hhv snippet
+      @media (any-hover: hover) {
+         &:hover {
+            text-decoration: underline;
+         }
       }
-    }
-  }
+   }
 }
 
 //========================================================================================================================================================
 
 .body-header {
-  padding: rem(10) 0;
-  background-color: #ecf1f2;
-  &__container {
-    display: flex;
-    min-height: rem(70);
-    align-items: center;
-  }
+   padding: rem(10) 0;
+   background-color: #ecf1f2;
+   &__container {
+      display: flex;
+      min-height: rem(70);
+      align-items: center;
+   }
 
-  &__logo {
-    @extend %ic;
-    @extend ._icon-logo;
-    font-size: rem(42);
-    color: $mainDarkColor;
-  }
+   &__logo {
+      @extend %ic;
+      @extend ._icon-logo;
+      font-size: rem(42);
+      color: $mainDarkColor;
+   }
 
-  &__search {
-    padding-right: rem(20);
-    flex: 1 1 auto;
-    @include adaptiveValue("padding-left", 158, 20);
-  }
+   &__search {
+      padding-right: rem(20);
+      flex: 1 1 auto;
+      @include adaptiveValue("padding-left", 158, 20);
+   }
 }
 
 .search-header {
-  max-width: rem(370);
-  background-color: $mainBgColorLight;
-  position: relative;
-  border: 1px solid rgba(4, 4, 4, 0.5);
-  border-radius: rem(3);
+   max-width: rem(370);
+   background-color: $mainBgColorLight;
+   position: relative;
+   border: 1px solid rgba(4, 4, 4, 0.5);
+   border-radius: rem(3);
 
-  //search-header button
-  &__button {
-    position: absolute;
-    background-color: transparent;
-    display: grid;
-    place-content: center;
-    width: rem(41);
-    height: rem(41);
-    top: 0;
-    left: rem(8);
-    font-size: rem(14);
-    color: rgba(0, 0, 0, 0.5);
-  }
-
-  &__input {
-    width: 100%;
-    height: rem(41);
-    padding: 0px rem(20) 0px rem(50);
-    border-radius: rem(3);
-    background-color: transparent;
-    color: $mainColor;
-
-    &::placeholder {
+   //search-header button
+   &__button {
+      position: absolute;
+      background-color: transparent;
+      display: grid;
+      place-content: center;
+      width: rem(41);
+      height: rem(41);
+      top: 0;
+      left: rem(8);
+      font-size: rem(14);
       color: rgba(0, 0, 0, 0.5);
-    }
-  }
+   }
+
+   &__input {
+      width: 100%;
+      height: rem(41);
+      padding: 0px rem(20) 0px rem(50);
+      border-radius: rem(3);
+      background-color: transparent;
+      color: $mainColor;
+
+      &::placeholder {
+         color: rgba(0, 0, 0, 0.5);
+      }
+   }
 }
 //========================================================================================================================================================
 //action-header
 
 .actions-header {
-  display: flex;
-  align-items: center;
-  column-gap: rem(30);
+   display: flex;
+   align-items: center;
+   column-gap: rem(30);
 
-  &__location {
-    display: inline-flex;
-    align-items: center;
-    font-weight: 600;
-    margin: 0px rem(25) 0px 0px;
+   &__location {
+      display: inline-flex;
+      align-items: center;
+      font-weight: 600;
+      margin: 0px rem(25) 0px 0px;
 
-    @media (any-hover: hover) {
-      &:hover {
-        span {
-          text-decoration: underline;
-        }
+      @media (any-hover: hover) {
+         &:hover {
+            span {
+               text-decoration: underline;
+            }
+         }
       }
-    }
 
-    &::before {
-      font-size: rem(24);
-      margin: 0px em(10, 24) 0px 0px;
-    }
-  }
+      &::before {
+         font-size: rem(24);
+         margin: 0px em(10, 24) 0px 0px;
+      }
+   }
 
-  &__favorite {
-    font-size: rem(27);
-  }
+   &__favorite {
+      font-size: rem(27);
+   }
 
-  &__card {
-    flex: 0 0 auto;
-  }
+   &__card {
+      flex: 0 0 auto;
+   }
 }
 //========================================================================================================================================================
 //phone-header
 .phone-header {
-  &__item {
-    position: relative;
-    display: flex;
-  }
+   &__item {
+      position: relative;
+      display: flex;
+   }
 
-  &__phone {
-    font-weight: $fw-m;
-    line-height: math.div(22, 18);
-    white-space: nowrap;
-    @media (any-hover: hover) {
-      &:hover {
-        text-decoration: underline;
+   &__phone {
+      font-weight: $fw-m;
+      line-height: math.div(22, 18);
+      white-space: nowrap;
+      @media (any-hover: hover) {
+         &:hover {
+            text-decoration: underline;
+         }
       }
-    }
-  }
+   }
 
-  &__arrow {
-    color: $accentColor;
-    font-size: rem(10);
-    margin: 0px 0px 0px em(17, 16);
-    transition: transform 0.3s ease 0s;
+   &__arrow {
+      color: $accentColor;
+      font-size: rem(10);
+      margin: 0px 0px 0px em(17, 16);
+      transition: transform 0.3s ease 0s;
 
-    &._spoller-active {
-      transform: rotate(180deg);
-    }
-  }
-  //phone-header__list
-  &__list {
-    position: absolute;
-    width: 100%;
-    top: 100%;
-    left: 0;
-    margin: rem(5) 0px 0px 0px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-
-    padding: rem(15);
-    border-radius: rem(10);
-    background-color: $mainBgColorWhite;
-
-    li {
-      &:not(:last-child) {
-        margin-bottom: em(8, 18);
+      &._spoller-active {
+         transform: rotate(180deg);
       }
-    }
-  }
+   }
+   //phone-header__list
+   &__list {
+      position: absolute;
+      width: 100%;
+      top: 100%;
+      left: 0;
+      margin: rem(5) 0px 0px 0px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 
-  &__callback {
-    font-weight: $fw-l;
-    line-height: math.div(22, 18);
-    color: $accentColor;
-    @media (any-hover: hover) {
-      &:hover {
-        text-decoration: underline;
+      padding: rem(15);
+      border-radius: rem(10);
+      background-color: $mainBgColorWhite;
+
+      li {
+         &:not(:last-child) {
+            margin-bottom: em(8, 18);
+         }
       }
-    }
-  }
+   }
+
+   &__callback {
+      font-weight: $fw-l;
+      line-height: math.div(22, 18);
+      color: $accentColor;
+      @media (any-hover: hover) {
+         &:hover {
+            text-decoration: underline;
+         }
+      }
+   }
 }
 
 //========================================================================================================================================================
 
 .card-header {
-  display: flex;
-  align-items: center;
-  column-gap: rem(15);
-  &__icon {
-    flex: 0 0 rem(37);
-    font-size: rem(35);
-    position: relative;
+   display: flex;
+   align-items: center;
+   column-gap: rem(15);
+   &__icon {
+      flex: 0 0 rem(37);
+      font-size: rem(35);
+      position: relative;
 
-    span {
-      position: absolute;
-      width: rem(14);
-      height: rem(14);
-      font-size: rem(8);
-      background-color: $accentColor;
-      border-radius: 50%;
-      display: grid;
-      place-content: center;
-      top: 0;
-      right: 0;
-      color: $mainTextColorLight;
-    }
-  }
-
-  &__body {
-    font-size: rem(16);
-    line-height: math.div(20, 16);
-    flex: 0 0 auto;
-  }
-
-  &__sum {
-    font-weight: $fw-s;
-    &:not(:last-child) {
-      margin-bottom: em(5, 16);
-    }
-  }
-
-  &__link {
-    color: $accentColor;
-    @media (any-hover: hover) {
-      &:hover {
-        text-decoration: underline;
+      span {
+         position: absolute;
+         width: rem(14);
+         height: rem(14);
+         font-size: rem(8);
+         background-color: $accentColor;
+         border-radius: 50%;
+         display: grid;
+         place-content: center;
+         top: 0;
+         right: 0;
+         color: $mainTextColorLight;
       }
-    }
-  }
+   }
+
+   &__body {
+      font-size: rem(16);
+      line-height: math.div(20, 16);
+      flex: 0 0 auto;
+   }
+
+   &__sum {
+      font-weight: $fw-s;
+      &:not(:last-child) {
+         margin-bottom: em(5, 16);
+      }
+   }
+
+   &__link {
+      color: $accentColor;
+      @media (any-hover: hover) {
+         &:hover {
+            text-decoration: underline;
+         }
+      }
+   }
 }
 
 //========================================================================================================================================================
 //catalog-header
 
 .catalog-header {
-  background-color: $mainDarkColor;
-  color: $mainTextColorLight;
-  position: relative;
+   background-color: $mainDarkColor;
+   color: $mainTextColorLight;
+   position: relative;
 }
 .menu-catalog {
-  &__list {
-    display: flex;
-    gap: rem(10);
-    justify-content: space-between;
-  }
+   &__list {
+      display: flex;
+      gap: rem(10);
+      justify-content: space-between;
+   }
 
-  &__link {
-    min-height: rem(70);
-    padding: 0 rem(10);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      opacity: 0;
-      visibility: hidden;
-      bottom: 0;
-      left: rem(10);
-      width: calc(100% - rem(20));
-      height: rem(1);
-      background-color: $accentColor;
-      transition: color 0.3s ease 0s;
-    }
-
-    @media (any-hover: hover) {
-      &:hover {
-        color: $accentColor;
-
-        &::after {
-          opacity: 1;
-          visibility: visible;
-        }
-      }
-    }
-
-    &._sub-menu-active {
-      color: $accentColor;
-      transition: all 0.3s ease 0s;
+   &__link {
+      min-height: rem(70);
+      padding: 0 rem(10);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
 
       &::after {
-        opacity: 1;
-        visibility: visible;
+         content: "";
+         position: absolute;
+         opacity: 0;
+         visibility: hidden;
+         bottom: 0;
+         left: rem(10);
+         width: calc(100% - rem(20));
+         height: rem(1);
+         background-color: $accentColor;
+         transition: color 0.3s ease 0s;
       }
-    }
-  }
 
-  &__sub-menu {
-    width: 100%;
-    left: 0;
-    top: 100%;
-    background-color: $mainDarkColor;
-  }
+      @media (any-hover: hover) {
+         &:hover {
+            color: $accentColor;
+
+            &::after {
+               opacity: 1;
+               visibility: visible;
+            }
+         }
+      }
+
+      &._sub-menu-active {
+         color: $accentColor;
+         transition: all 0.3s ease 0s;
+
+         &::after {
+            opacity: 1;
+            visibility: visible;
+         }
+      }
+   }
+
+   &__sub-menu {
+      width: 100%;
+      left: 0;
+      top: 100%;
+      background-color: $mainDarkColor;
+   }
 }
 .sub-menu-catalog {
-  &__block {
-    padding-bottom: rem(30);
-    padding: 0 rem(10);
-    display: none;
-    justify-content: space-between;
+   &__block {
+      padding-bottom: rem(30);
+      padding: 0 rem(10);
+      display: none;
+      justify-content: space-between;
 
-    &._sub-menu-open {
+      &._sub-menu-open {
+         display: flex;
+      }
+   }
+
+   &__column {
+      flex: 1 1 auto;
       display: flex;
-    }
-  }
+      flex-direction: column;
+      gap: rem(30);
+   }
 
-  &__column {
-    flex: 1 1 auto;
-    display: flex;
-    flex-direction: column;
-    gap: rem(30);
-  }
-
-  &__category {
-    font-size: rem(16);
-    line-height: math.div(20, 16);
-    font-weight: $fw-l;
-    padding: rem(30) rem(10);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    @media (any-hover: hover) {
-      &:hover {
-        text-decoration: underline;
+   &__category {
+      font-size: rem(16);
+      line-height: math.div(20, 16);
+      font-weight: $fw-l;
+      padding: rem(30) rem(10);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      @media (any-hover: hover) {
+         &:hover {
+            text-decoration: underline;
+         }
       }
-    }
-  }
+   }
 
-  &__list {
-    flex: 1 1 auto;
-    display: flex;
-    flex-direction: column;
-    gap: rem(20);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    padding-bottom: rem(30);
-    padding-left: rem(10);
-    padding-right: rem(10);
-  }
+   &__list {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      gap: rem(20);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      padding-bottom: rem(30);
+      padding-left: rem(10);
+      padding-right: rem(10);
+   }
 
-  &__link {
-    font-size: rem(16);
-    line-height: math.div(20, 16);
-    @media (any-hover: hover) {
-      &:hover {
-        text-decoration: underline;
+   &__link {
+      font-size: rem(16);
+      line-height: math.div(20, 16);
+      @media (any-hover: hover) {
+         &:hover {
+            text-decoration: underline;
+         }
       }
-    }
-  }
+   }
 
-  &__all {
-    font-size: rem(16);
-    padding: rem(30) 0;
-    color: $accentColor;
-    padding-left: rem(10);
-    padding-right: rem(10);
+   &__all {
+      font-size: rem(16);
+      padding: rem(30) 0;
+      color: $accentColor;
+      padding-left: rem(10);
+      padding-right: rem(10);
 
-    @media (any-hover: hover) {
-      &:hover {
-        text-decoration: underline;
+      @media (any-hover: hover) {
+         &:hover {
+            text-decoration: underline;
+         }
       }
-    }
-  }
+   }
 }
 
 // Burger
 
 .icon-menu {
-  display: none;
-  @media (max-width: $mobile) {
-    display: block;
-    position: relative;
-    flex: 0 0 rem(30);
-    height: rem(18);
-    cursor: pointer;
-    z-index: 5;
+   display: none;
+   @media (max-width: $mobile) {
+      display: block;
+      position: relative;
+      flex: 0 0 rem(30);
+      height: rem(18);
+      cursor: pointer;
+      z-index: 5;
 
-    span,
-    &::before,
-    &::after {
-      content: "";
-      transition: all 0.3s ease 0s;
-      right: 0;
-      position: absolute;
-      width: 100%;
-      height: rem(2);
-      background-color: #fff;
-    }
-    &::before {
-      top: 0;
-    }
-    &::after {
-      bottom: 0;
-    }
-    span {
-      top: calc(50% - rem(1));
-    }
-    .menu-open & {
-      span {
-        width: 0;
+      span,
+      &::before,
+      &::after {
+         content: "";
+         transition: all 0.3s ease 0s;
+         right: 0;
+         position: absolute;
+         width: 100%;
+         height: rem(2);
+         background-color: #fff;
       }
       &::before {
-        top: calc(50% - rem(1));
-        transform: rotate(-45deg);
+         top: 0;
       }
       &::after {
-        bottom: calc(50% - rem(1));
-        transform: rotate(45deg);
+         bottom: 0;
       }
-    }
-  }
+      span {
+         top: calc(50% - rem(1));
+      }
+      .menu-open & {
+         span {
+            width: 0;
+         }
+         &::before {
+            top: calc(50% - rem(1));
+            transform: rotate(-45deg);
+         }
+         &::after {
+            bottom: calc(50% - rem(1));
+            transform: rotate(45deg);
+         }
+      }
+   }
 }
