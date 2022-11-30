@@ -72,11 +72,11 @@
       font-size: rem(42);
       color: $mainDarkColor;
    }
-
+   //.body-header__search
    &__search {
       padding-right: rem(20);
       flex: 1 1 auto;
-      @include adaptiveValue("padding-left", 158, 20);
+      @include adaptiveValue("padding-left", 158, 20, 1620, 1400);
    }
 }
 
@@ -114,9 +114,8 @@
       }
    }
 }
-//========================================================================================================================================================
-//action-header
 
+//action-header
 .actions-header {
    display: flex;
    align-items: center;
@@ -126,7 +125,8 @@
       display: inline-flex;
       align-items: center;
       font-weight: 600;
-      margin: 0px rem(25) 0px 0px;
+
+      @include adaptiveValue("margin-right", 25, 0, 1620, 1400, 1);
 
       @media (any-hover: hover) {
          &:hover {
@@ -268,6 +268,8 @@
    color: $mainTextColorLight;
    position: relative;
 }
+//========================================================================================================================================================
+
 .menu-catalog {
    &__list {
       display: flex;
@@ -328,47 +330,43 @@
 }
 .sub-menu-catalog {
    &__block {
-      padding-bottom: rem(30);
-      padding: 0 rem(10);
       display: none;
-      justify-content: space-between;
+
+      @for $var from 1 to 6 {
+         &_#{$var} {
+            //justify-content: start;
+            grid-template-columns: repeat($var, minmax(auto, rem(320)));
+         }
+      }
 
       &._sub-menu-open {
-         display: flex;
+         display: grid;
       }
    }
 
-   &__column {
-      flex: 1 1 auto;
-      display: flex;
-      flex-direction: column;
-      gap: rem(30);
+   &__container {
+      padding: 0px rem(10);
    }
-
+   // .sub-menu-catalog__category
    &__category {
       font-size: rem(16);
       line-height: math.div(20, 16);
-      font-weight: $fw-l;
-      padding: rem(30) rem(10);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
       @media (any-hover: hover) {
          &:hover {
             text-decoration: underline;
          }
       }
    }
-
+   // .sub-menu-catalog__list
    &__list {
-      flex: 1 1 auto;
       display: flex;
       flex-direction: column;
-      gap: rem(20);
+      gap: 20px;
+      padding: rem(30) rem(15) rem(30) 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
       border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-      padding-bottom: rem(30);
-      padding-left: rem(10);
-      padding-right: rem(10);
    }
-
+   // .sub-menu-catalog__link
    &__link {
       font-size: rem(16);
       line-height: math.div(20, 16);
@@ -379,13 +377,20 @@
       }
    }
 
+   &__link-category {
+      @include adaptiveValue("font-size", 30, 20, 992, 320);
+   }
+
+   &__footer {
+      padding: rem(30) rem(15) rem(30) 0;
+      @media (max-width: $tablet) {
+         display: none;
+      }
+   }
+   // .sub-menu-catalog__all
    &__all {
       font-size: rem(16);
-      padding: rem(30) 0;
       color: $accentColor;
-      padding-left: rem(10);
-      padding-right: rem(10);
-
       @media (any-hover: hover) {
          &:hover {
             text-decoration: underline;
