@@ -9,6 +9,7 @@
 // snipped click
 document.addEventListener("click", documentActions);
 
+// Проверяем все объекты menu block, если они  есть проверяем их длину, и подставляем эту цифру в конец класса
 const menuBlocks = document.querySelectorAll(".sub-menu-catalog__block");
 if (menuBlocks.length) {
    menuBlocks.forEach((menuBlock) => {
@@ -51,13 +52,13 @@ function documentActions(e) {
       document.documentElement.classList.remove("catalog-open");
       document.querySelector("._sub-menu-active")
          ? document
-              .querySelector("._sub-menu-active")
-              .classList.remove("_sub-menu-active")
+				.querySelector("._sub-menu-active")
+				.classList.remove("_sub-menu-active")
          : null;
       document.querySelector("._sub-menu-open")
          ? document
-              .querySelector("._sub-menu-open")
-              .classList.remove("_sub-menu-open")
+				.querySelector("._sub-menu-open")
+				.classList.remove("_sub-menu-open")
          : null;
       e.preventDefault();
    }
@@ -65,13 +66,13 @@ function documentActions(e) {
       document.documentElement.classList.remove("sub-menu-open");
       document.querySelector("._sub-menu-active")
          ? document
-              .querySelector("._sub-menu-active")
-              .classList.remove("_sub-menu-active")
+				.querySelector("._sub-menu-active")
+				.classList.remove("_sub-menu-active")
          : null;
       document.querySelector("._sub-menu-open")
          ? document
-              .querySelector("._sub-menu-open")
-              .classList.remove("_sub-menu-open")
+				.querySelector("._sub-menu-open")
+				.classList.remove("_sub-menu-open")
          : null;
       e.preventDefault();
    }
