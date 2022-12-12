@@ -83,7 +83,7 @@
 		flex: 0 0 rem(30);
 	}
 	&__body {
-		@media (max-width: $mobile) {
+		@media (max-width: $tablet) {
 			position: fixed;
 			width: 100%;
 			height: 100%;
@@ -421,8 +421,8 @@
 		}
 	}
 
-	&__container {
-	}
+	// &__container {
+	// }
 	// .sub-menu-catalog__category
 	&__category {
 		font-size: rem(16);
