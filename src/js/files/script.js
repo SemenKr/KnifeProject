@@ -44,7 +44,7 @@ function documentActions(e) {
       }
       e.preventDefault();
    }
-   if (targetElement.closest(".menu-top-header__link_catalog")) {
+   if (targetElement.closest(".menu-top-header__link--catalog")) {
       document.documentElement.classList.add("catalog-open");
       e.preventDefault();
    }

@@ -69,7 +69,7 @@
 	}
 	// ..menu-top-header__item
 	&__item {
-		&_catalog {
+		&--catalog {
 			@media (min-width: $tablet) {
 				display: none;
 			}
@@ -79,9 +79,11 @@
 	&__link {
 		font-size: rem(16);
 		line-height: math.div(20, 16);
+		transition: color 0.3s ease 0s,opacity 0.3s ease 0s;
 		@media (any-hover: hover) {
 			&:hover {
-				text-decoration: underline;
+				opacity: 0.8;
+				color:$accentColor;
 			}
 		}
 		&--catalog {
@@ -89,6 +91,7 @@
 			align-items: center;
 			flex-direction: row-reverse;
 			justify-content: space-between;
+			
 			&::before {
 				flex: 0 0 14px;
 				height: 14px;
@@ -97,6 +100,11 @@
 				align-items: center;
 				font-size: rem(8);
 				transform: translateY(rem(-2)) rotate(-90deg);
+				@media (any-hover: hover) {
+					&:hover {
+						text-decoration: none;
+					}
+				}
 			}
 		}
 		@media (max-width: $tablet) {
@@ -247,17 +255,18 @@
 			}
 		}
 	}
-	// .actions-header__phones
-	&__phones {
-	}
+
 	// .actions-header__favorite
 	&__favorite {
 		position: relative;
 		z-index: 5;
 		font-size: rem(27);
 	}
-	// .actions-header__cart
-	&__cart {
+
+	&__card {
+		position: relative;
+		z-index: 5;
+		font-size: rem(27);
 	}
 }
 //========================================================================================================================================================
@@ -355,6 +364,8 @@
 	display: flex;
 	align-items: center;
 	column-gap: rem(15);
+
+		// .card-header__icon
 	&__icon {
 		flex: 0 0 rem(37);
 		font-size: rem(35);
@@ -364,14 +375,15 @@
 			position: absolute;
 			width: rem(14);
 			height: rem(14);
-			font-size: rem(8);
 			background-color: $accentColor;
+			font-size: rem(7);
 			border-radius: 50%;
-			display: grid;
-			place-content: center;
+			display: flex;
 			top: 0;
 			right: 0;
-			color: $mainTextColorLight;
+			color: #fff;
+			justify-content: center;
+			align-items: center;
 		}
 	}
 
@@ -443,14 +455,13 @@
 			row-gap: rem(25);
 		}
 	}
-	// .menu-catalog__item
-	&__item {
-	}
+
 	// .menu-catalog__link
 	&__link {
 		display: flex;
 		position: relative;
 		transition: color 0.3s ease 0s;
+
 		&[data-parent] {
 			&::before {
 				@extend %ic;
@@ -549,6 +560,7 @@
 			z-index: 6;
 		}
 	}
+
 	&__back {
 		display: none;
 		@media (max-width: $tablet) {
@@ -614,9 +626,7 @@
 			display: none;
 		}
 	}
-	// .sub-menu-catalog__item
-	&__item {
-	}
+
 	// .sub-menu-catalog__link
 	&__link {
 		font-size: rem(16);
@@ -694,14 +704,5 @@
 				transform: rotate(45deg);
 			}
 		}
-	}
-}
-
-.block {
-	&::before {
-		content: "";
-		width: 50px;
-		height: 50px;
-		background-color: orange;
 	}
 }
