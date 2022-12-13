@@ -36,11 +36,13 @@
 		font-weight: 600;
 		line-height: math.div(22, 18);
 		gap: em(15, 18);
+		transition: color 0.3s ease 0s;
 		&::before {
 			font-size: rem(28);
 		}
 		@media (any-hover: hover) {
 			&:hover {
+				color: $accentColor;
 				span {
 					text-decoration: underline;
 				}
@@ -79,11 +81,11 @@
 	&__link {
 		font-size: rem(16);
 		line-height: math.div(20, 16);
-		transition: color 0.3s ease 0s,opacity 0.3s ease 0s;
+		transition: color 0.3s ease 0s, opacity 0.3s ease 0s;
 		@media (any-hover: hover) {
 			&:hover {
 				opacity: 0.8;
-				color:$accentColor;
+				color: $accentColor;
 			}
 		}
 		&--catalog {
@@ -91,7 +93,7 @@
 			align-items: center;
 			flex-direction: row-reverse;
 			justify-content: space-between;
-			
+
 			&::before {
 				flex: 0 0 14px;
 				height: 14px;
@@ -117,6 +119,7 @@
 }
 
 .menu {
+	
 	// .menu__body
 	&__body {
 		left: -100%;
@@ -261,12 +264,26 @@
 		position: relative;
 		z-index: 5;
 		font-size: rem(27);
+		transition: color 0.3s ease 0s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $accentColor;
+			}
+		}
 	}
 
 	&__card {
 		position: relative;
 		z-index: 5;
 		font-size: rem(27);
+		transition: color 0.3s ease 0s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $accentColor;
+			}
+		}
 	}
 }
 //========================================================================================================================================================
@@ -283,16 +300,24 @@
 		font-weight: 600;
 		white-space: nowrap;
 		line-height: math.div(22, 18);
+		transition: color 0.3s ease 0s;
+
 		&::before {
 			@extend %ic;
 			@extend ._icon-footer-phone;
 			display: none;
 		}
 
+		@media (any-hover: hover) {
+			&:hover {
+				color: $accentColor;
+			}
+		}
+
 		@media (max-width: $tablet) {
 			font-size: rem(25);
 		}
-		
+
 		@media (max-width: $mobileSmall) {
 			&::before {
 				display: block;
@@ -365,7 +390,7 @@
 	align-items: center;
 	column-gap: rem(15);
 
-		// .card-header__icon
+	// .card-header__icon
 	&__icon {
 		flex: 0 0 rem(37);
 		font-size: rem(35);
@@ -567,11 +592,20 @@
 			display: inline-flex;
 			align-items: center;
 			@include adaptiveValue("font-size", 30, 20, 992, 320, 1);
+			transition: color 0.3s ease 0s;
+
 			&:not(:last-child) {
 				margin-bottom: em(65, 30);
 			}
+
 			&::before {
 				margin: 0px em(13, 30) 0px 0px;
+			}
+
+			@media (any-hover: hover){
+				&:hover{
+					color: $accentColor;
+				}
 			}
 		}
 	}
@@ -598,10 +632,12 @@
 	&__category {
 		font-size: rem(16);
 		line-height: math.div(20, 16);
+		transition: color 0.3s ease 0s,text-decoration 0.3s ease 0s;
 
 		@media (any-hover: hover) {
 			&:hover {
 				text-decoration: underline;
+				color: $accentColor
 			}
 		}
 		@media (min-width: $tablet) {
@@ -631,9 +667,12 @@
 	&__link {
 		font-size: rem(16);
 		line-height: math.div(20, 16);
+		transition: color 0.3s ease 0s;
+
 		@media (any-hover: hover) {
 			&:hover {
 				text-decoration: underline;
+				color: $accentColor
 			}
 		}
 	}
@@ -663,6 +702,12 @@
 // Burger
 
 .icon-menu {
+	@media (any-hover: hover){
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
 	@media (max-width: $tablet) {
 		display: block;
 		position: relative;
@@ -670,6 +715,7 @@
 		height: rem(18);
 		cursor: pointer;
 		z-index: 5;
+
 
 		span,
 		&::before,
