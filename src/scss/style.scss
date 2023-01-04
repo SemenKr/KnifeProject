@@ -158,6 +158,8 @@ body {
 // Подключение стилей отдельных блоков
 @import "header";
 @import "footer";
+@import "products-slider";
+@import "products-new";
 
 // Подключение стилей отдельных страниц
 @import "home";

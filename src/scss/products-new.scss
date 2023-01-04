@@ -1,0 +1,111 @@
+.products-new {
+	background: url("@img/new-products/bg.jpg") bottom / cover no-repeat;
+	position: relative;
+	@include adaptiveValue("padding-top", 55, 20);
+	@include adaptiveValue("padding-bottom", 55, 20);
+	color: $mainTextColorLight;
+
+	&::before {
+		content: "";
+		background-color: #fff;
+		height: 46px;
+		position: absolute;
+		right: 0;
+		top: -1px;
+		width: percent(1030, 1920);
+	}
+
+	// .products-new__inner
+	&__inner {
+		@include adaptiveValue("padding-top", 55, 20);
+		@include adaptiveValue("padding-bottom", 55, 20);
+	}
+
+	// .products-new__container
+	&__container {
+		display: grid;
+		row-gap: rem(40);
+
+		@media (min-width: $tablet) {
+			grid-template-columns: rem(400) 1fr;
+			align-items: start;
+		}
+	}
+
+	// .products-new__body
+
+	&__body {
+		@include adaptiveValue("padding-right", 70, 20, 1630, 992, 2);
+	}
+
+	// .products-new__section
+	&__section {
+		position: relative;
+		z-index: 2;
+		grid-column: 1/2;
+	}
+
+	// .products-new__title
+
+	&__title {
+		font-weight: bold;
+		font-size: rem(30);
+		line-height: math.div(46, 30);
+		&:not(:last-child) {
+			margin-bottom: em(30, 30);
+		}
+	}
+
+	// .products-new__text
+
+	&__text {
+		font-size: rem(18);
+		line-height: math.div(27, 18);
+		letter-spacing: 0.03em;
+		color: rgba(255, 255, 255, 0.7);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 60, 20);
+		}
+	}
+
+		// .products-new__content
+		&__content {
+			min-width: 0;
+			@media (min-width: $tablet) {
+				padding: rem(37) 0px 0px 0px;
+			}
+		}
+
+	// .products-new__wrapper
+	&__wrapper {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 50, 20);
+		}
+	}
+
+		// .products-new__dotts
+		&__dotts {
+			position: relative;
+			z-index: 3;
+		}
+}
+.link-arrow {
+	display: inline-flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	color: $accentColor;
+	font-weight: 600;
+	font-size: rem(20);
+	&::before {
+		margin: 0px 0 0px em(20, 20);
+		transform: rotate(-90deg);
+		font-size: rem(8);
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			span {
+				text-decoration: underline;
+			}
+		}
+	}
+}
