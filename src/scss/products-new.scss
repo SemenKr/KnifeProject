@@ -33,7 +33,6 @@
 	}
 
 	// .products-new__body
-
 	&__body {
 		@include adaptiveValue("padding-right", 70, 20, 1630, 992, 2);
 	}
@@ -46,7 +45,6 @@
 	}
 
 	// .products-new__title
-
 	&__title {
 		font-weight: bold;
 		font-size: rem(30);
