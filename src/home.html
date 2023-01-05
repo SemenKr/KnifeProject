@@ -284,7 +284,6 @@
 				</div>
 			</section>
 			<section class="page__products-block products-block">
-				<h2 class="visually-hidden">Продукция</h2>
 				<div class="products-block__container">
 					<div class="products-block__item product-block">
 						<div class="product-block__body">
@@ -301,7 +300,7 @@
 					<div class="products-block__item product-block">
 						<div class="product-block__body">
 							<h4 class="product-block__title">
-								<a href="" class="product-block__link-title">Налобные мультифонари</a>
+								<a href="" class="product-block__link-title">Палобные мультифонари</a>
 							</h4>
 							<div class="product-block__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
 							<a href="" class="product-block__button button">Подробнее</a>
@@ -311,6 +310,12 @@
 						</div>
 					</div>
 				</div>
+			</section>
+			<section class="page__hits-products hits-products">
+				@@include('html/_products-lights-slider.htm',{
+				"title":"Фонари",
+				"moretext":"Перейти в каталог"
+				})
 			</section>
 		</main>
 		@@include('html/_footer.htm',{})
