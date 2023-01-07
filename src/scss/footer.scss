@@ -157,9 +157,21 @@
 }
 
 .social-footer {
+	display: flex;
+	flex-wrap: wrap;
+	gap: rem(15);
 	// .social-footer__item
-
 	&__item {
+		transition: transform 0.3s ease 0s;
+		@media (any-hover: hover){
+			&:hover{
+				transform: scale(1.2);
+			}
+
+			&:active {
+				transform: scale(0.98);
+			}
+		}
 	}
 
 	// .social-footer__link
