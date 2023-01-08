@@ -95,7 +95,7 @@ class SelectConstructor {
 	getSelectClass(className) {
 		return `.${className}`;
 	}
-	// Геттер элементов псевдоселекта
+	// Геттер элементов псевдо-селекта
 	getSelectElement(selectItem, className) {
 		return {
 			originalSelect: selectItem.querySelector('select'),
@@ -140,6 +140,11 @@ class SelectConstructor {
 		// Присваиваем уникальный ID
 		index ? originalSelect.dataset.id = index : null;
 
+		// Конструктор косновных элементов
+		selectItem.insertAdjacentHTML('beforeend', `<div class="${this.selectClasses.classSelectBody}"><div hidden class="${this.selectClasses.classSelectOptions}"></div></div>`);
+		// Запускаем конструктор псевдоселекта
+		this.selectBuild(originalSelect);
+
 		// Работа с плейсхолдером
 		if (this.getSelectPlaceholder(originalSelect)) {
 			// Запоминаем плейсхолдер
@@ -150,11 +155,6 @@ class SelectConstructor {
 				selectItemTitle.insertAdjacentHTML('afterbegin', `<span class="${this.selectClasses.classSelectLabel}">${this.getSelectPlaceholder(originalSelect).label.text ? this.getSelectPlaceholder(originalSelect).label.text : this.getSelectPlaceholder(originalSelect).value}</span>`);
 			}
 		}
-		// Конструктор основных элементов
-		selectItem.insertAdjacentHTML('beforeend', `<div class="${this.selectClasses.classSelectBody}"><div hidden class="${this.selectClasses.classSelectOptions}"></div></div>`);
-		// Запускаем конструктор псевдоселекта
-		this.selectBuild(originalSelect);
-
 		// Запоминаем скорость
 		originalSelect.dataset.speed = originalSelect.dataset.speed ? originalSelect.dataset.speed : "150";
 		// Событие при изменении оригинального select

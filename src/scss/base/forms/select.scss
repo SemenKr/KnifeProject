@@ -20,13 +20,11 @@
 	&__value {
 		display: flex;
 		align-items: center;
-		height: rem(30);
-		padding: 0 rem(15);
-		gap: rem(10);
-		> * {
-			flex: 1 1 auto;
-		}
-		&:after {
+		height: 30px;
+		padding: 0px rem(15);
+		justify-content: space-between;
+		flex-direction: row-reverse;
+		&:before {
 			content: "";
 			align-self: stretch;
 			flex: 0 0 10px;
@@ -36,12 +34,6 @@
 			align-items: center;
 			._select-open & {
 				transform: rotate(-180deg);
-			}
-		}
-		&._select-pseudo-label {
-			&::before {
-				content: attr(data-pseudo-label);
-				opacity: 0.5;
 			}
 		}
 	}
@@ -84,6 +76,7 @@
 	// .select__option
 	&__option {
 		width: 100%;
+		display: block;
 		text-align: left;
 		cursor: pointer;
 		padding: 5px 15px;
@@ -121,6 +114,30 @@
 	&._select-multiple {
 	}
 	&._select-checkbox {
+	}
+	&_control {
+		.select__title {
+			border: 1px solid rgba(4, 4, 4, 0.3);
+			border-radius: 3px;
+		}
+		.select__value {
+			height: rem(40);
+			color: rgba(0, 0, 0, 0.5);
+			&::before {
+				font-size: rem(8);
+				@extend %ic;
+				content: "\e900";
+				margin-left: em(10, 8);
+			}
+		}
+		.select__option {
+			color: rgba(0, 0, 0, 0.5);
+			@media (any-hover: hover) {
+				&:hover {
+					color: rgba(0, 0, 0, 1);
+				}
+			}
+		}
 	}
 }
 

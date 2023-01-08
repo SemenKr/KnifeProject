@@ -19,4 +19,11 @@
 			box-shadow: 0 4px 25px rgba(232, 170, 49, 0.73);
 		}
 	}
+
+	&_border {
+		background-color: $mainBgColorWhite;
+		border: 1px solid $accentColor;
+		color: $accentColor;
+		box-shadow: none;
+	}
 }
