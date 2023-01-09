@@ -7,24 +7,49 @@ import * as noUiSlider from 'nouislider';
 // Подключение cтилей из node_modules
 // import 'nouislider/dist/nouislider.css';
 
-export function rangeInit() {
+export function rangeInit()
+{
 
-	const rangeItems =document.querySelectorAll('[data-range]');
+	const rangeItems = document.querySelectorAll('[data-range]');
 
-	if (rangeItems.length) { 
-		rangeItems.forEach(rangeItem => {
-			const fromValue = rangeItem.querySelector ('[data-range-from]');
-			const toValue = rangeItem.querySelector ('[data-range-to]');
-			const item = rangeItem.querySelector ('[data-range-item]');
+	if (rangeItems.length)
+	{
+		rangeItems.forEach(rangeItem =>
+		{
+			const fromValue = rangeItem.querySelector('[data-range-from]');
+			const toValue = rangeItem.querySelector('[data-range-to]');
+			const item = rangeItem.querySelector('[data-range-item]');
 
 			noUiSlider.create(item, {
-				start: [Number(fromValue.value), Number(toValue.value)],
+				start: [500, 1000],
 				connect: true,
+
 				range: {
-					'min': [Number(fromValue.dataset.rangeFrom)],
-					'max': [Number(toValue.dataset.rangeTo)]
+					'min': 0,
+					'max': 5000
 				}
 			});
+
+			item.noUiSlider.on('update', function (values, handle)
+			{
+				if (handle == 0)
+				{
+					fromValue.value = values[handle];
+				} else
+				{
+					toValue.value = values[handle];
+				}
+			})
+
+			fromValue.addEventListener('change', function ()
+			{
+				item.noUiSlider.set([this.value, null]);
+			});
+			toValue.addEventListener('change', function ()
+			{
+				item.noUiSlider.set([null, this.value]);
+			});
+
 		});
 	}
 

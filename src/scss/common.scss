@@ -39,8 +39,7 @@
 		background-color: $accentColor;
 		padding: rem(6) rem(22);
 		z-index: 2;
-		pointer-events: none
-
+		pointer-events: none;
 	}
 
 	// .product-card__image
@@ -202,6 +201,7 @@
 	justify-content: flex-end;
 	align-items: center;
 	gap: rem(30);
+	@include adaptiveValue("gap", 30, 15);
 
 	// .pagination__arrow
 	&__arrow {

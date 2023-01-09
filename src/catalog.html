@@ -23,22 +23,22 @@
 			</div>
 			<div class="catalog">
 				<div class="catalog__container">
-					<div class="catalog__body">
+					<div data-spollers="991.98" class="catalog__body">
 						<div class="catalog__filter filter-catalog">
-							<button type="button" class="filter-catalog__title">Фильтр товаров</button>
+							<button data-spoller type="button" class="filter-catalog__title _icon-arrow-bottom">Фильтр товаров</button>
 							<div data-spollers class="filter-catalog__items">
 								<div class="filter-catalog__price price-filter">
 									<button type="button" data-spoller class="price-filter__title _icon-arrow-bottom">Цена</button>
 									<div data-range class="price-filter__body">
 										<div class="price-filter__inputs">
-											<input data-range-from="0" autocomplete="off" type="text" value="500" name="form[]" class="price-filter__input">
+											<input data-range-from="0" id="slider-input" autocomplete="off" type="text" value="500" name="form[]" class="price-filter__input">
 											<input data-range-to="5000" autocomplete="off" type="text" value="1000" name="form[]" class="price-filter__input">
 										</div>
 										<div data-range-item class="price-filter__range"></div>
 									</div>
 								</div>
 								<div class="filter-catalog__item item-filter-catalog">
-									<button type="button" data-spoller class="item-filter-catalog__title _icon-spoller-arrow">Производство</button>
+									<button type="button" data-spoller class="item-filter-catalog__title _icon-arrow-bottom">Производство</button>
 									<div class="item-filter-catalog__body">
 										<div class="item-filter-catalog__checkbox checkbox">
 											<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
@@ -55,6 +55,10 @@
 										<div class="item-filter-catalog__checkbox checkbox">
 											<input id="c_4" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
 											<label for="c_4" class="checkbox__label"><span class="checkbox__text">АиР <small>(250)</small></span></label>
+										</div>
+										<div class="checkbox">
+											<input id="c_5" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+											<label for="c_5" class="checkbox__label"><span class="checkbox__text">ЗОК<small>(250)</small></span></label>
 										</div>
 									</div>
 								</div>
