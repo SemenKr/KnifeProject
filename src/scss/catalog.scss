@@ -10,16 +10,6 @@
 		}
 	}
 
-	// .catalog__filter
-
-	&__filter {
-	}
-
-	// .catalog__content
-
-	&__content {
-	}
-
 	// .catalog__control
 	&__control {
 		display: flex;
@@ -47,16 +37,6 @@
 		@media (max-width: $tablet) {
 			flex-direction: column;
 		}
-	}
-
-	// .catalog__more
-
-	&__more {
-	}
-
-	// .catalog__pagination
-
-	&__pagination {
 	}
 }
 
@@ -101,15 +81,6 @@
 				}
 			}
 		}
-	}
-	// .filter-catalog__items
-	&__items {
-	}
-	// .filter-catalog__price
-	&__price {
-	}
-	// .filter-catalog__item
-	&__item {
 	}
 }
 .price-filter {
