@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation, Pagination, Parallax, Autoplay, Thumbs} from 'swiper';
+import Swiper, { Navigation, Pagination, Parallax, Autoplay, Thumbs } from 'swiper';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -25,14 +25,18 @@ import "../../scss/base/swiper.scss";
 
 // Добавление классов слайдерам
 // swiper главному блоку, swiper-wrapper оболочке, swiper-slide для слайдов
-function buildSliders() {
+function buildSliders()
+{
 	//BuildSlider
 	let sliders = document.querySelectorAll('[class*="__swiper"]:not(.swiper-wrapper)');
-	if (sliders) {
-		sliders.forEach(slider => {
+	if (sliders)
+	{
+		sliders.forEach(slider =>
+		{
 			slider.parentElement.classList.add('swiper');
 			slider.classList.add('swiper-wrapper');
-			for (const slide of slider.children) {
+			for (const slide of slider.children)
+			{
 				slide.classList.add('swiper-slide');
 			}
 		});
@@ -40,13 +44,15 @@ function buildSliders() {
 }
 
 // Инициализация слайдеров
-function initSliders() {
+function initSliders()
+{
 	// Добавление классов слайдера
 	// при необходимости отключить
 	buildSliders();
 
 	// Перечень слайдеров
-	if (document.querySelector('.main-block__slider')) {
+	if (document.querySelector('.main-block__slider'))
+	{
 		new Swiper('.main-block__slider', {
 			// Подключаем модули слайдера
 			// для конкретного случая
@@ -95,19 +101,22 @@ function initSliders() {
 			},
 			*/
 			on: {
-				init: function (swiper) {
+				init: function (swiper)
+				{
 					const allSlides = document.querySelector('.fraction-controll__all');
 					const allSlidesItems = document.querySelectorAll('.slide-main-block:not(.swiper-slide-duplicate)');
 					allSlides.innerHTML = allSlidesItems.length < 10 ? `0${allSlidesItems.length}` : allSlidesItems.length;
 				},
-				slideChange: function (swiper) {
+				slideChange: function (swiper)
+				{
 					const currentSlide = document.querySelector('.fraction-controll__current');
 					currentSlide.innerHTML = swiper.realIndex + 1 < 10 ? `0${swiper.realIndex + 1}` : swiper.realIndex + 1;
 				}
 			}
 		});
 	}
-	if (document.querySelector('.products-slider')) {
+	if (document.querySelector('.products-slider'))
+	{
 		new Swiper('.products-slider__slider', {
 			// Подключаем модули слайдера
 			// для конкретного случая
@@ -156,13 +165,15 @@ function initSliders() {
 				},
 			},
 			on: {
-				init: function (swiper) {
+				init: function (swiper)
+				{
 
 				}
 			}
 		});
 	}
-	if (document.querySelector('.products-new')) {
+	if (document.querySelector('.products-new'))
+	{
 		new Swiper('.products-new__slider', {
 			// Подключаем модули слайдера
 			// для конкретного случая
@@ -211,14 +222,16 @@ function initSliders() {
 				},
 			},
 			on: {
-				init: function (swiper) {
+				init: function (swiper)
+				{
 
 				}
 			}
 		});
 	}
 
-	if (document.querySelector('.thumbs-images')) {
+	if (document.querySelector('.thumbs-images'))
+	{
 		const thumbsSwiper = new Swiper('.thumbs-images', {
 			// Подключаем модули слайдера
 			// для конкретного случая
@@ -254,7 +267,8 @@ function initSliders() {
 				},
 			},
 			on: {
-				init: function (swiper) {
+				init: function (swiper)
+				{
 
 				}
 			}
@@ -284,14 +298,15 @@ function initSliders() {
 			//preloadImages: false,
 			//lazy: true,
 			on: {
-				init: function (swiper) {
+				init: function (swiper)
+				{
 
 				}
 			}
 		});
 
 	}
- }
+}
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
 // function initSlidersScroll() {
 // 	let sliderScrollItems = document.querySelectorAll('.swiper_scroll');
@@ -321,7 +336,8 @@ function initSliders() {
 // 	}
 // }
 
-window.addEventListener("load", function (e) {
+window.addEventListener("load", function (e)
+{
 	// Запуск инициализации слайдеров
 	initSliders();
 	// Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
