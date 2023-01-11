@@ -6,7 +6,7 @@
 
 <h2> Demo </h2>
 
-<a href="https://semenkr.github.io/KnifeProject/dist/"><img src="">Click Here</a>
+<a href="https://semenkr.github.io/KnifeProject/dist/">Click Here</a>
 
 
 <h2> Features </h2>
