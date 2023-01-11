@@ -138,6 +138,36 @@
 				}
 			}
 		}
+		.select__options {
+			top: 42px;
+		}
+	}
+
+	&_product {
+		.select__value {
+			height: rem(40);
+			color: $accentColor;
+			background: linear-gradient(to left, rgba(0, 0, 0, 1) rem(43), rgba(255, 254, 254, 1) rem(43));
+			&::before {
+				font-size: rem(8);
+				@extend %ic;
+				content: "\e900";
+				margin-left: em(10, 8);
+			}
+		}
+
+		.select__option {
+			color: rgba(0, 0, 0, 0.5);
+			@media (any-hover: hover) {
+				&:hover {
+					color: rgba(0, 0, 0, 1);
+				}
+			}
+		}
+
+		.select__options {
+			top: rem(42);
+		}
 	}
 }
 

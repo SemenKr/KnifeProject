@@ -10,7 +10,7 @@
 	border-radius: rem(3);
 	font-weight: 600;
 	font-size: rem(20);
-	line-height: math.div(32 , 20);
+	line-height: math.div(32, 20);
 	text-align: center;
 	transition: box-shadow 0.3s ease 0s;
 
@@ -25,5 +25,10 @@
 		border: 1px solid $accentColor;
 		color: $accentColor;
 		box-shadow: none;
+	}
+
+	&_black {
+		background-color: $mainDarkColor;
+		color: $mainTextColorLight;
 	}
 }

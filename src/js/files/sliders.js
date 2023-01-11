@@ -278,10 +278,10 @@ function initSliders()
 			// для конкретного случая
 			modules: [Navigation, Pagination, Autoplay, Thumbs],
 			//effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
+			// autoplay: {
+			// 	delay: 3000,
+			// 	disableOnInteraction: false,
+			// },
 			thumbs: {
 				swiper: thumbsSwiper
 			},
