@@ -1,20 +1,15 @@
 
-# Educational project KnifeShop
+<h1>Educational project KnifeShop</h1>
 
-Online knife shop, adaptive use, tooltips, custom select, cwipers, adaptive...
-
-
-## Authors
-
-- [@SemenKr](https://github.com/SemenKr)
+<p>Online knife shop, adaptive use, tooltips, custom select, cwipers, adaptive...</p>
 
 
-## Demo
+<h2> Demo </h2>
 
-https://semenkr.github.io/KnifeProject/dist/
+<a href="https://semenkr.github.io/KnifeProject/dist/"><img src="">Click Here</a>
 
 
-## Features
+<h2> Features </h2>
 
 - adaptive
 - BEM
@@ -23,10 +18,13 @@ https://semenkr.github.io/KnifeProject/dist/
 - svg sprite
 
 
-## 🚀 About Me
-I'm a front-end developer...
+<h2> 🚀 About Me </h2>
+<p>I'm a front-end developer...</p>
 
 
 ## 🔗 Links
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/SemenKr)
 
+<h2> Authors </h2>
+
+- [@SemenKr](https://github.com/SemenKr)
